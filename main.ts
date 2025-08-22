@@ -1,4 +1,8 @@
+input.onButtonPressed(Button.A, function () {
+    music.play(music.stringPlayable("C C C C - - - C ", 120), music.PlaybackMode.UntilDone)
+})
 basic.forever(function () {
+    led.setBrightness(12)
     basic.showLeds(`
         # . . . .
         . . . . .
@@ -118,8 +122,7 @@ basic.forever(function () {
         . . . . .
         . . . . .
         `)
-    music.play(music.tonePlayable(988, music.beat(BeatFraction.Breve)), music.PlaybackMode.UntilDone)
-    music.play(music.tonePlayable(131, music.beat(BeatFraction.Breve)), music.PlaybackMode.InBackground)
+    led.setBrightness(255)
     basic.showLeds(`
         # . # . #
         . # # # .
